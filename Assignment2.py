@@ -33,9 +33,5 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
-#if using termux
-#plt.savefig('./line/figs/line_icept.pdf')
-#plt.savefig('./line/figs/line_icept.eps')
-#subprocess.run(shlex.split("termux-open ./line/figs/line_icept.pdf"))
-#else
+
 plt.show()
