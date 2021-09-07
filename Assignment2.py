@@ -11,27 +11,24 @@ def line_gen(A,B):
   return x_AB
 n = np.array([2,3])
 c = 7
+P=np.array([2,1]) # given point
 e1 = np.array([1,0])
 e2 = np.array([0,1])
 A = c*e1/(n@e1)
 B = c*e2/(n@e2)
 #Generating all lines
 x_AB = line_gen(A,B)
-
-
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
-
-
 plt.plot(A[0], A[1], 'o')
 plt.text(A[0] * (1 - 0.1), A[1] * (1 - 0.1) , 'A')
 plt.plot(B[0], B[1], 'o')
 plt.text(B[0] * (1-0.3), B[1] * (1-0.1) , 'B')
-
+plt.scatter(P[0],P[1],color='black',label='given point')
+plt.text(1.913,0.92,'x')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
-
 plt.show()
