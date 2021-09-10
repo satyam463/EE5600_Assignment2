@@ -160,28 +160,49 @@ Download  tex file from
 https://github.com/satyam463/EE5600Ass1/blob/main/Assignment2.tex
 \end{lstlisting}
 \section{Problem Statement}
-\subsection{Linearform, Exercise 2, Question No 2}
-Find the value of k, if $\myvec{2\\1}$ is solution of the equation
+\subsection{Vector2, Example 4, Question No 6}
+Sketch the loci of the following equation
 \begin{align}
-    \myvec{2&3}\vec{x}=k
+    3x=y^{2}-9
 \end{align}
 \section{Solution}
+Consider given equation
+\begin{align}
+y^{2}-3x-9=0\label{b1}
+\end{align}
+\brak{\ref{b1}} can be expressed as
+\begin{align}
+\vec{x}^{T}\vec{V}\vec{x}+2\vec{u}^{T}\vec{x}+f=0
+\end{align}
+with parameters
+\begin{align}
+\vec{V}=\myvec{0&0\\0&1}, \vec{u}=\myvec{-\frac{3}{2}\\0}, f=-9
+\end{align}
+\begin{align}
+\mydet{V}=0
+\end{align}
+Hence, the curve is parabola.\\
+The vertex of parabola can be given as $\vec{c}$
+\begin{align}
+    \myvec{\vec{u}^{T}+\eta \vec{p_1}^{T}\\V}\vec{c}=\myvec{-f\\\eta \vec{p_1}-\vec{u}}
+\end{align}
+where 
+\begin{align}
+    \eta=\vec{p_1}^{T}\vec{u}, \vec{p_1}=\myvec{1\\0}
+\end{align}
+\begin{align}
+    \myvec{-3&0\\0&0\\0&1}\vec{c}=\myvec{9\\0\\0}
+\end{align}
+\begin{align}
+    \myvec{-3&0\\0&1}\vec{c}=\myvec{9\\0} 
+\end{align}
+\begin{align}
+\vec{c}=\myvec{-3\\0}
+\end{align}
 \begin{figure}[ht!]
        \centering
-        \includegraphics[width =\linewidth]{Figure_3.png}
-        \caption{Line equation $ \myvec{2&3}\vec{x}=7$}\label{t1}
+        \includegraphics[width =\linewidth]{parabola.png}
+        \caption{parabola with vertex $\vec{c}\myvec{-3\\0}$}\label{t1}
 \end{figure}
-Given:
-\begin{align}
-\vec{x}=\myvec{2\\1} \label{sol}
-\end{align}
-substitute \brak{\ref{sol}} in the equation
-\begin{align}
-    \myvec{2&3}\myvec{2\\1}=k
-\end{align}
-\begin{align}
-    \Rightarrow{k}=7
-\end{align}
-Therefore, equation becomes $\myvec{2&3}\vec{x}=7$.
 \end{document}
 
