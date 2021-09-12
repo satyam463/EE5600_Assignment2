@@ -49,6 +49,7 @@ xStandardparab = np.vstack((x,y))
 #xActualparab = P@(xStandardparab - c1[:,np.newaxis])-u[:,np.newaxis]/D_vec[1]
 xActualparab = P@xStandardparab + c[:,np.newaxis]
 #xActualparab = P@xStandardparab
+xstandardparab = P@xStandardparab + O[:,np.newaxis]
 
 #Labeling the coordinates
 parab_coords = np.vstack((O,c)).T
@@ -63,7 +64,7 @@ for i, txt in enumerate(vert_labels):
 
 
 #Plotting the actual and standard parabola
-plt.plot(xStandardparab[0,:],xStandardparab[1,:],label='Standard Parabola',color='m')
+plt.plot(xstandardparab[0,:],xstandardparab[1,:],label='Standard Parabola',color='m')
 plt.plot(xActualparab[0,:],xActualparab[1,:],label='Given Parabola',color='g')
 
 plt.xlabel('$x$')
