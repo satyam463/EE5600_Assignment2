@@ -181,7 +181,17 @@ with parameters
 \begin{align}
 \mydet{V}=0
 \end{align}
-Hence, the curve is parabola.\\
+Thus, the given curve is a parabola.  $\because \vec{V}$ is diagonal and in standard form.Using
+\begin{align}
+\vec{x}=\vec{P}\vec{y}+\vec{c}   \brak{\text{Affine Transformation}}\label{af}
+\end{align}
+such that,
+\begin{align}
+\vec{P}^{T}\vec{V}\vec{P}=\vec{D}  \brak{\text{EigenValue Decomposition}}
+\end{align}
+\begin{align}
+\vec{P}=\myvec{\vec{p_1} & \vec{p_2}} , \vec{P}^{T}=\vec{P}^{-1}\label{in}
+\end{align}
 The vertex of parabola can be given as $\vec{c}$
 \begin{align}
     \myvec{\vec{u}^{T}+\eta \vec{p_1}^{T}\\V}\vec{c}=\myvec{-f\\\eta \vec{p_1}-\vec{u}}
@@ -199,10 +209,17 @@ where
 \begin{align}
 \vec{c}=\myvec{-3\\0}
 \end{align}
+Using \refeq{af} and \refeq{in} we can the write
+\begin{align}
+\vec{y}=\vec{P}^{-1}\brak{\vec{x}-\vec{c}}\implies\vec{y}=\vec{P}^{T}\brak{\vec{x}-\vec{c}}
+\end{align}
+\begin{align}
+\vec{x}=\myvec{0\\0}\implies\vec{y}=\myvec{3\\0}
+\end{align}
 \begin{figure}[ht!]
        \centering
         \includegraphics[width =\linewidth]{Parabola1.png}
-        \caption{Given parabola with vertex $\vec{c}\myvec{-3\\0}$ and Standard Parabola with vertex $\vec{o}\myvec{0\\0}$}\label{t1}
+        \caption{Given parabola with vertex $\vec{c}=\myvec{-3\\0}$ and Standard Parabola with vertex $\vec{O}=\myvec{0\\0}$}\label{t1}
 \end{figure}
 \end{document}
 
